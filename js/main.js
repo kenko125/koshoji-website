@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }, observerOptions);
 
   // アニメーション対象の要素を取得
-  const animateElements = document.querySelectorAll('.section-title, .app-card, .news-item, .content-block, .hero-content');
+  // .fade-in-up をHTML側に直接書いた要素（.cta-primary等）も必ず監視対象に含める
+  const animateElements = document.querySelectorAll('.section-title, .app-card, .news-item, .content-block, .hero-content, .fade-in-up');
 
   animateElements.forEach((el, index) => {
     el.classList.add('fade-in-up');
