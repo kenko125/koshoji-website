@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap"
         rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2212%22%20fill%3D%22%233E3128%22/%3E%3Ctext%20x%3D%2232%22%20y%3D%2247%22%20font-family%3D%22Hiragino%20Mincho%20ProN%2CYu%20Mincho%2Cserif%22%20font-size%3D%2240%22%20fill%3D%22%23B49658%22%20text-anchor%3D%22middle%22%3E%E5%85%89%3C/text%3E%3C/svg%3E">
-    <link rel="stylesheet" href="css/style.css?v=260804">
+    <link rel="stylesheet" href="css/style.css?v=260805">
 </head>
 
 <body>
@@ -54,53 +54,42 @@
             <div class="section-header">
                 <h2 class="section-title">2026年 年間行事</h2>
             </div>
-            <div class="content-block">
-                <table class="event-table">
-                    <thead>
-                        <tr>
-                            <th>日程</th>
-                            <th>行事名</th>
-                            <th>内容</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1月1日（木）10:00</td>
-                            <td>修正会</td>
-                            <td>新年を迎え、仏前にて勤行を行います（御斎なし）</td>
-                        </tr>
-                        <tr>
-                            <td>1月1日〜3日10:00〜17:00</td>
-                            <td>年始参り</td>
-                            <td>新年のご挨拶を承ります</td>
-                        </tr>
-                        <tr>
-                            <td>3月20日（金）10:30</td>
-                            <td>春彼岸法要</td>
-                            <td>春のお彼岸の法要を勤めます（法話：住職、御斎あり）</td>
-                        </tr>
-                        <tr>
-                            <td>8月10日（月）10:30</td>
-                            <td>盂蘭盆会</td>
-                            <td>お盆の法要を勤めます（法話：今泉温資 氏、御斎あり）</td>
-                        </tr>
-                        <tr>
-                            <td>9月23日（水）</td>
-                            <td>秋彼岸会</td>
-                            <td>秋のお彼岸の法要を勤めます（法話：副住職、御斎あり）</td>
-                        </tr>
-                        <tr>
-                            <td>10月24日（土）14:00</td>
-                            <td>世話方会議</td>
-                            <td>光照寺世話方による会議を行います</td>
-                        </tr>
-                        <tr>
-                            <td>11月15日（日）10:30</td>
-                            <td>報恩講</td>
-                            <td>宗祖親鸞聖人の御恩に報いる、真宗で最も大切な法要をお勤めします（法話：三明智彰 氏、御斎あり）</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="event-cards">
+                <div class="event-card">
+                    <span class="event-card-date">1月1日（木）10:00</span>
+                    <h3 class="event-card-name">修正会</h3>
+                    <p class="event-card-desc">新年を迎え、仏前にて勤行を行います（御斎なし）</p>
+                </div>
+                <div class="event-card">
+                    <span class="event-card-date">1月1日〜3日 10:00〜17:00</span>
+                    <h3 class="event-card-name">年始参り</h3>
+                    <p class="event-card-desc">新年のご挨拶を承ります</p>
+                </div>
+                <div class="event-card">
+                    <span class="event-card-date">3月20日（金）10:30</span>
+                    <h3 class="event-card-name">春彼岸法要</h3>
+                    <p class="event-card-desc">春のお彼岸の法要を勤めます（法話：住職、御斎あり）</p>
+                </div>
+                <div class="event-card">
+                    <span class="event-card-date">8月10日（月）10:30</span>
+                    <h3 class="event-card-name">盂蘭盆会</h3>
+                    <p class="event-card-desc">お盆の法要を勤めます（法話：今泉温資 氏、御斎あり）</p>
+                </div>
+                <div class="event-card">
+                    <span class="event-card-date">9月23日（水）</span>
+                    <h3 class="event-card-name">秋彼岸会</h3>
+                    <p class="event-card-desc">秋のお彼岸の法要を勤めます（法話：副住職、御斎あり）</p>
+                </div>
+                <div class="event-card">
+                    <span class="event-card-date">10月24日（土）14:00</span>
+                    <h3 class="event-card-name">世話方会議</h3>
+                    <p class="event-card-desc">光照寺世話方による会議を行います</p>
+                </div>
+                <div class="event-card">
+                    <span class="event-card-date">11月15日（日）10:30</span>
+                    <h3 class="event-card-name">報恩講</h3>
+                    <p class="event-card-desc">宗祖親鸞聖人の御恩に報いる、真宗で最も大切な法要をお勤めします（法話：三明智彰 氏、御斎あり）</p>
+                </div>
             </div>
         </div>
     </section>
@@ -258,7 +247,7 @@
         </div>
     </footer>
 
-    <script src="js/main.js?v=260804"></script>
+    <script src="js/main.js?v=260805"></script>
 </body>
 
 </html>

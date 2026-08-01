@@ -288,7 +288,7 @@ ol {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, rgba(62, 49, 40, 0.2) 0%, rgba(62, 49, 40, 0.5) 100%);
+  background: radial-gradient(circle at center, rgba(62, 49, 40, 0.05) 0%, rgba(62, 49, 40, 0.35) 100%);
   z-index: 1;
 }
 
@@ -513,6 +513,61 @@ ol {
   }
 }
 
+/* Event Cards（年間行事） */
+.event-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.event-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-gold);
+  border-radius: 4px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-subtle);
+}
+
+.event-card-date {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-gold);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4rem;
+}
+
+.event-card-name {
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  margin-bottom: 0.6rem;
+}
+
+.event-card-desc {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  line-height: 1.9;
+  margin: 0;
+}
+
+/* 電話番号の大型表示（折り返し禁止・画面幅に応じて縮む） */
+.tel-display {
+  font-size: clamp(1.5rem, 6.5vw, 2.5rem);
+  font-weight: 600;
+  margin: var(--spacing-md) 0;
+  color: var(--color-gold);
+  white-space: nowrap;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
 /* Timeline */
 .timeline {
   max-width: 800px;
@@ -585,13 +640,13 @@ ol {
 }
 
 .btn-primary {
-  background-color: var(--color-primary);
+  background-color: var(--color-accent);
   color: var(--color-white);
-  box-shadow: 0 4px 15px rgba(62, 49, 40, 0.3);
+  box-shadow: 0 4px 15px rgba(142, 120, 96, 0.3);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-primary-light);
+  background-color: #7B6753;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(62, 49, 40, 0.4);
 }
@@ -827,8 +882,8 @@ select:focus,
    Footer
    ============================================ */
 .footer {
-  background-color: #2F241D;
-  color: rgba(255, 255, 255, 0.8);
+  background-color: #594D43;
+  color: rgba(255, 255, 255, 0.88);
   padding: var(--spacing-xxl) var(--spacing-sm) var(--spacing-lg);
   font-family: var(--font-sans);
 }
@@ -858,7 +913,7 @@ select:focus,
 }
 
 .footer-links a {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 0.9rem;
   display: block;
   margin-bottom: 0.8rem;
@@ -873,7 +928,7 @@ select:focus,
    Page Header (Sub-pages)
    ============================================ */
 .page-header {
-  background-color: var(--color-primary);
+  background-color: var(--color-accent);
   color: var(--color-white);
   padding: calc(var(--header-height) + 4rem) var(--spacing-sm) 4rem;
   text-align: center;
@@ -889,8 +944,7 @@ select:focus,
   /* 背景として薄く使う */
   background-size: cover;
   background-position: center;
-  opacity: 0.2;
-  filter: grayscale(100%);
+  opacity: 0.28;
 }
 
 .page-title {
@@ -972,14 +1026,37 @@ select:focus,
     --spacing-xxl: 5rem;
   }
 
+  /* スマホでは写真を切り抜かず全景で見せ、歌は写真の下に置く */
+  .hero {
+    height: auto;
+    display: block;
+    padding-top: var(--header-height);
+    background-color: var(--color-background);
+  }
+
+  .hero-image-wrapper {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    aspect-ratio: 1024 / 1016;
+  }
+
+  .hero-overlay {
+    display: none;
+  }
+
+  .scroll-down {
+    display: none;
+  }
+
   .hero-content {
     writing-mode: horizontal-tb;
     border-left: none;
-    padding-left: 0;
     margin-left: 0;
     height: auto;
     width: 100%;
-    padding: 0 1.25rem;
+    padding: 2rem 1.25rem 2.5rem;
+    color: var(--color-primary);
   }
 
   .hero-title {
@@ -995,6 +1072,12 @@ select:focus,
     line-height: 2.2;
     margin-bottom: 0.5rem;
     white-space: nowrap;
+    text-shadow: none;
+  }
+
+  .hero-tanka-author,
+  .hero-subtitle {
+    color: var(--color-accent);
   }
 
   .hero-tanka-author {
