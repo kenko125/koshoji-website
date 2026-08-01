@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kenko125.github.io/koshoji-website/sitemap.xml
