@@ -485,6 +485,36 @@ ol {
   width: 25%;
 }
 
+/* 横に長い料金表など、幅を固定できない表用。中身だけ横スクロールさせページ自体は横に伸ばさない */
+.table-scroll {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-scroll .price-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  background-color: var(--color-white);
+  margin-bottom: 0;
+}
+
+.table-scroll .price-table th,
+.table-scroll .price-table td {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  text-align: center;
+  white-space: nowrap;
+  font-size: 0.95rem;
+}
+
+.table-scroll .price-table th {
+  background-color: var(--color-background-alt);
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
 @media (max-width: 600px) {
 
   .event-table th,
