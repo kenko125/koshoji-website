@@ -555,6 +555,11 @@ ol {
   margin: 0;
 }
 
+.event-card-note {
+  display: block;
+  margin-top: 0.2rem;
+}
+
 /* 電話番号の大型表示（折り返し禁止・画面幅に応じて縮む） */
 .tel-display {
   font-size: clamp(1.5rem, 6.5vw, 2.5rem);
@@ -625,7 +630,8 @@ ol {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 3rem;
+  white-space: nowrap;
+  padding: 1rem 2.5rem;
   font-family: var(--font-sans);
   font-size: 0.95rem;
   letter-spacing: 0.1em;
@@ -663,10 +669,10 @@ ol {
 }
 
 .btn-large {
-  padding: 1.2rem 4rem;
+  padding: 1.2rem 2rem;
   font-size: 1.1rem;
   width: 100%;
-  max-width: 300px;
+  max-width: 360px;
 }
 
 /* ============================================
