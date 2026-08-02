@@ -521,6 +521,29 @@ ol {
   width: 25%;
 }
 
+/* 短い値だけの小さな表（区画と料金など）。スマホでも縦積みにせず、常に横並びのまま見せる */
+.simple-table {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto 1.5rem;
+  border-collapse: collapse;
+  background-color: var(--color-white);
+}
+
+.simple-table th,
+.simple-table td {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.simple-table th {
+  background-color: var(--color-background-alt);
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
 /* 横に長い料金表など、幅を固定できない表用。中身だけ横スクロールさせページ自体は横に伸ばさない */
 .table-scroll {
   overflow-x: auto;
@@ -655,10 +678,12 @@ ol {
   }
 
   .event-card-name {
+    grid-column: 1;
     grid-row: 2;
   }
 
   .event-card-desc {
+    grid-column: 1;
     grid-row: 3;
   }
 }
@@ -1240,10 +1265,13 @@ select:focus,
     margin-bottom: var(--spacing-md);
   }
 
-  /* ボタン: 余白を詰め、文字は折り返さない */
+  /* ボタン: 余白を詰める。短いラベルは1行のまま、長いラベルは折り返して画面外にはみ出させない */
   .btn {
     padding: 1rem 1.75rem;
-    white-space: nowrap;
+    white-space: normal;
+    max-width: 100%;
+    text-align: center;
+    line-height: 1.5;
   }
 
   .btn-large {
