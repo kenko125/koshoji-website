@@ -963,10 +963,37 @@ ol {
   flex-shrink: 0;
 }
 
+/* 日付の右側。タイトルと（任意の）本文をまとめる */
+.news-body {
+  flex: 1;
+  min-width: 0;
+}
+
 .news-title {
   font-size: 1rem;
   color: var(--color-text);
   line-height: 1.6;
+}
+
+/* LINEでお知らせした内容をそのまま載せるときの本文。無くてもよい */
+.news-text {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  line-height: 1.9;
+  margin-top: 0.6rem;
+}
+
+@media (max-width: 600px) {
+  .news-item {
+    display: block;
+  }
+
+  .news-date {
+    display: block;
+    width: auto;
+    margin-bottom: 0.4rem;
+  }
 }
 
 /* ============================================
