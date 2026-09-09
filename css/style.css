@@ -200,7 +200,7 @@ ol {
 /* Navigation */
 .nav-menu {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .nav-link {
@@ -1280,8 +1280,8 @@ select:focus,
 /* ============================================
    Responsive
    ============================================ */
-/* ナビが1行に収まらない中間幅ではハンバーガーメニューに切り替える */
-@media (max-width: 1080px) {
+/* ナビが1行に収まらない中間幅ではハンバーガーメニューに切り替える（項目8件でロゴが折り返す幅を含む） */
+@media (max-width: 1120px) {
   .nav-menu {
     display: none;
     position: absolute;
