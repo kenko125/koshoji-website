@@ -997,6 +997,103 @@ ol {
 }
 
 /* ============================================
+   掲示板の言葉
+   ============================================ */
+.keijiban {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--spacing-md) var(--spacing-sm);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--color-gold);
+  text-align: center;
+}
+
+.keijiban-month {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  color: var(--color-accent);
+}
+
+.keijiban-words {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 500;
+  line-height: 2.1;
+  color: var(--color-primary);
+  margin-top: var(--spacing-sm);
+}
+
+.keijiban-source {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin-top: var(--spacing-sm);
+}
+
+/* バックナンバー */
+.keijiban-archive {
+  max-width: 700px;
+  margin: var(--spacing-md) auto 0;
+}
+
+.keijiban-archive-title {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: var(--color-accent);
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.keijiban-past {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-md);
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.keijiban-past-month {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  width: 100px;
+  flex-shrink: 0;
+}
+
+.keijiban-past-words {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--color-text);
+}
+
+@media (max-width: 600px) {
+  .keijiban {
+    padding: var(--spacing-sm) var(--spacing-xs);
+  }
+
+  .keijiban-words {
+    font-size: 1.15rem;
+    line-height: 2;
+  }
+
+  .keijiban-past {
+    display: block;
+  }
+
+  .keijiban-past-month {
+    display: block;
+    width: auto;
+    margin-bottom: 0.4rem;
+  }
+}
+
+/* ============================================
    Forms
    ============================================ */
 .form-group {
